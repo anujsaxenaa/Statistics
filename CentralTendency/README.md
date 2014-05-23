@@ -6,5 +6,5 @@ Visualization for self implemented computations for the mean, median & mode valu
 
 To run the shiny app, run the following code in R
 ```
-shiny::runGitHub('Statistics', 'anujsaxenaa', subdir='task1')
+shiny::runGitHub('Statistics', 'anujsaxenaa', subdir='CentralTendency')
 ```
