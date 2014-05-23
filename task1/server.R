@@ -1,7 +1,6 @@
 #setwd("/MSAN/Github/Statistics/task1")
 library(shiny)
 library(ggplot2)
-library(modeest)
 
 shape1 <- c(1,1.5,2,2.5,3,3.5,4,4.5,5,5,5,5,5)
 shape2 <- c(5,5,5,5,5,4.5,4,3.5,3,2.5,2,1.5,1)
