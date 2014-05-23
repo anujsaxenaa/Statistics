@@ -2,8 +2,8 @@
 library(shiny)
 library(ggplot2)
 
-shape1 <- c(1,1.5,2,2.5,3,3.5,4,4.5,5,5,5,5,5)
-shape2 <- c(5,5,5,5,5,4.5,4,3.5,3,2.5,2,1.5,1)
+shape1 <- c(1,1.25,1.5,1.75,2,2.25,2.5,2.75,3,3.25,3.5,3.75,4,4.25,4.5,4.75,5,5,5,5,5)
+shape2 <- c(5,5,5,5,5,4.75,4.5,4.25,4,3.75,3.5,3.25,3,2.75,2.5,2.25,2,1.75,1.5,1.25,1)
 
 gen_random <- function(indeces) {
   x <- rbeta(10000,shape1[indeces],shape2[indeces])
@@ -30,7 +30,7 @@ get_density_plot <- function(indeces) {
   
   x <- gen_random(indeces)
   
-  r_x <- round(x,3)
+  r_x <- round(x,2)
   dfr <- data.frame(x)
   compute_mean <- sum(x)/length(x)
   mean_X <- compute_mean

@@ -7,7 +7,7 @@ shinyUI(fluidPage(theme = "http://bootswatch.com/2/readable/bootstrap.min.css","
                                     "start", 
                                     "Iteration",
                                     min = 1, 
-                                    max = 13,
+                                    max = 21,
                                     value = 1,
                                     step = 1,
                                     round = FALSE, 
