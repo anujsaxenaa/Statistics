@@ -29,7 +29,7 @@ compute_mode <- function(target) {
 compute_mode2 <- function(target) {
   den_x <- density(target)
   mod <- den_x$x[which.max(den_x$y)]
-  return(mod)
+  return(c(mod,max(den_x$y)))
 }
 
 get_density_plot <- function(indeces) {
@@ -41,7 +41,8 @@ get_density_plot <- function(indeces) {
   compute_mean <- sum(x)/length(x)
   mean_X <- compute_mean
   median_X <- compute_median(x)
-  mode_X <- compute_mode2(r_x)
+  mode_X <- compute_mode2(r_x)[1]
+  y_val <- compute_mode2(r_x)[2]
   p <- ggplot(dfr,aes(x))+geom_density()+
         geom_vline(xintercept=mean_X,color="#e41a1c") +
         annotate("text",label="Mean",x=mean_X,y=2,fontface=3) +
@@ -53,7 +54,7 @@ get_density_plot <- function(indeces) {
         theme(panel.grid.minor = element_blank()) +
         theme(plot.background = element_blank()) +
         theme(axis.ticks.x = element_blank()) +
-        scale_y_continuous(expand=c(0,0))
+        scale_y_continuous(limits=c(0,4.5),expand=c(0,0)) # y_val+0.1
   return(p)
 }
 
