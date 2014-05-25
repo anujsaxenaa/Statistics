@@ -1,6 +1,6 @@
 library(shiny)
-shinyUI(fluidPage(theme = "http://bootswatch.com/2/readable/bootstrap.min.css","Title",
-                  title = "Visualization",
+shinyUI(fluidPage(theme = "http://bootswatch.com/2/readable/bootstrap.min.css","Central Tendencies",
+                  title = "Central Tendencies",
                   fluidRow(column(11.5,offset=0,plotOutput('densityPlot')),
                            column(7,offset=2,
                                   sliderInput(

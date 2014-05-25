@@ -1,4 +1,4 @@
-#setwd("/MSAN/Github/Statistics/task1")
+setwd("/MSAN/Github/Statistics/CentralTendency")
 library(shiny)
 library(ggplot2)
 
@@ -51,7 +51,9 @@ get_density_plot <- function(indeces) {
         annotate("text",label="Mode",x=mode_X,y=1,fontface=3) +
         theme(panel.grid.major = element_blank()) +
         theme(panel.grid.minor = element_blank()) +
-        theme(plot.background = element_blank())
+        theme(plot.background = element_blank()) +
+        theme(axis.ticks.x = element_blank()) +
+        scale_y_continuous(expand=c(0,0))
   return(p)
 }
 
